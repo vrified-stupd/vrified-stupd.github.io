@@ -48,3 +48,16 @@ body {
     background-color: rgb(57, 175, 93);
     color: white;
 }
+
+.invisibleBtn {
+    background-color: rgb(54, 54, 54);
+    border: none;
+    color: rgb(66, 135, 245);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
