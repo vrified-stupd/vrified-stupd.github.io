@@ -29,7 +29,13 @@ p {
     font-size: 20px;
 }
 
-section {
+a {
+    font-family: Arial;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.sectionblock {
     margin-bottom: 3rem;
     padding: 20px;
     background-color: #b3b3aa;
@@ -39,7 +45,7 @@ section {
     opacity: 0.90;
 }
 
-main {
+.showcase {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
