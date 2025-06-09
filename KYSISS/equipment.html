@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KYSISS OFFICIAL | KYS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    #purchaseModal {
+      transition: opacity 0.25s ease;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">KYSISS</h1>
+        <nav class="space-x-4">
+            <a href="index.html#home" class="text-gray-600 hover:text-gray-900">Home</a>
+            <a href="index.html#about" class="text-gray-600 hover:text-gray-900">About</a>
+            <a href="index.html#services" class="text-gray-600 hover:text-gray-900">Services</a>
+        </nav>
+        </div>
+    </header>
+  <div class="max-w-4xl mx-auto px-4 py-20">
+    <h1 class="text-4xl font-bold mb-6">KYS Equipment</h1>
+    <p class="text-lg text-gray-600 mb-4">"POINTY STABBY THINGY GO POINTY STABBY THINGY IN HIS STOMACH"</p>
+    <p class="text-lg text-gray-600 mb-4">-Your local KYSISS CEO</p>
+    <p class="text-gray-700">Just want to end it all? (please seek help) Take a knife and stab it through! Not your cup of tea? BLOW YOUR FACE OFF WITH A SHOTGUN!!!!! Or maybe die elegantly with a rope. Pick your poison! (Pun intended)</p>
+
+    <button id="openPurchaseBtn" class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700">
+      Purchase Equipment
+    </button>
+
+    <a href="index.html#services" class="inline-block mt-8 px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">
+      Back to Services
+    </a>
+  </div>
+
+  <div id="purchaseModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg max-w-md w-full p-6 relative">
+      <button id="closeModalBtn" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-2xl font-bold">&times;</button>
+      <h2 class="text-2xl font-semibold mb-4">Purchase Menu</h2>
+
+      <form id="purchaseForm" class="space-y-4">
+        <div>
+          <label class="block font-medium mb-1">Select Items to Buy:</label>
+          <div class="space-y-2">
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="items" value="Item A" class="form-checkbox" />
+              <span class="ml-2">Knife [5 USD]</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="items" value="Item B" class="form-checkbox" />
+              <span class="ml-2">Revolver [50 USD]</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="items" value="Item C" class="form-checkbox" />
+              <span class="ml-2">Shotgun [60 USD]</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="items" value="Item D" class="form-checkbox" />
+              <span class="ml-2">Poison [15 USD]</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="items" value="Item E" class="form-checkbox" />
+              <span class="ml-2">Rope [1 USD]</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="items" value="Item F" class="form-checkbox" />
+              <span class="ml-2">COOL GLOWING SWORD [1000 USD 🤑🤑🤑]</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="items" value="Item G" class="form-checkbox" />
+              <span class="ml-2">Serial killer compressed to a pill that you put in water so he can expand and kill you [2 USD]</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="items" value="Item H" class="form-checkbox" />
+              <span class="ml-2">Nothing 💀 [0 USD]</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label for="couponCode" class="block font-medium mb-1">Coupon Code:</label>
+          <input id="couponCode" type="text" name="couponCode" placeholder="Enter coupon code" class="w-full border border-gray-300 rounded px-3 py-2" />
+        </div>
+
+        <div>
+          <label for="photoUpload" class="block font-medium mb-1">Upload Coupon Proof:</label>
+          <input id="photoUpload" type="file" name="photoUpload" accept="image/*" class="w-full" disabled />
+        </div>
+
+        <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded hover:bg-blue-700">
+          Complete Purchase
+        </button>
+      </form>
+    </div>
+  </div>
+  <footer class="bg-white border-t mt-20 py-6 text-center text-gray-500 text-sm">
+    &copy; 2025 KYSISS. All rights reserved. THIS IS SATIRICAL, DON'T HUNT ME DOWN PLEASE :sob:
+  </footer>
+
+  <script>
+    const openBtn = document.getElementById('openPurchaseBtn');
+    const modal = document.getElementById('purchaseModal');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const purchaseForm = document.getElementById('purchaseForm');
+
+    openBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+    const couponInput = purchaseForm.elements['couponCode'];
+    const photoInput = purchaseForm.elements['photoUpload'];
+
+    couponInput.addEventListener('input', () => {
+    if (couponInput.value.trim() !== '') {
+        photoInput.disabled = false;
+        photoInput.required = true;
+    } else {
+        photoInput.disabled = true;
+        photoInput.required = false;
+        photoInput.value = '';
+    }
+    });
+
+    purchaseForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const items = [...purchaseForm.elements['items']];
+    const selectedItems = items.filter(i => i.checked).map(i => i.value);
+
+    if (selectedItems.length === 0) {
+        alert('Please select at least one item to purchase.');
+        return;
+    }
+
+    const coupon = couponInput.value.trim();
+
+    if (coupon !== '') {
+        if (!photoInput.files.length) {
+        alert('Please upload a photo for proof when using a coupon.');
+        return;
+        }
+    }
+
+    if (selectedItems.includes('Item H')) {
+        window.location.href = 'bruh.html';
+        return;
+    }
+
+    if (coupon.toUpperCase() === 'KYS50') {
+        window.location.href = 'notkys50.html';
+    } else {
+        alert('Purchase completed successfully!');
+        modal.classList.add('hidden');
+        purchaseForm.reset();
+        photoInput.disabled = true;
+    }
+    });
+
+  </script>
+</body>
+</html>

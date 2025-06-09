@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KYSISS OFFICIAL</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navigation -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">KYSISS</h1>
+      <nav class="space-x-4">
+        <a href="#home" class="text-gray-600 hover:text-gray-900">Home</a>
+        <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
+        <a href="#services" class="text-gray-600 hover:text-gray-900">Services</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="h-screen flex items-center justify-center bg-gray-50">
+    <div class="text-center">
+      <h2 class="text-4xl font-bold mb-4">KYSISS</h2>
+      <p class="text-lg text-gray-600">Suicide, Divorce Lawyers, and Equipment. Right here, right now.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-semibold mb-6">About Us</h2>
+      <p class="text-gray-600 text-lg">KYSISS is a (SATIRICAL) company that aims to provide humanity with the most depressing and pessimistic services ever!</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-semibold text-center mb-12">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold mb-2">KYS</h3>
+          <p class="text-gray-600 mb-4">"YOU SHOULD KYS NOW!"</p>
+          <p class="text-gray-600 mb-4">-Some famous streamer...</p>
+          <a href="kys.html" class="inline-block px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700">Learn More</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold mb-2">Divorce Lawyers</h3>
+          <p class="text-gray-600 mb-4">Got a spouse?</p>
+          <p class="text-gray-600 mb-4">Divorce them!</p>
+          <a href="divorce.html" class="inline-block px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700">Learn More</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold mb-2">Equipment</h3>
+          <p class="text-gray-600 mb-4">Make KYS-ing easier!</p>
+          <p class="text-gray-600 mb-4">(We don't got rifles)</p>
+          <a href="equipment.html" class="inline-block px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700">Learn More</a>
+        </div>
+       <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="text-xl font-bold mb-2">Coming soon...</h3>
+            <p class="text-gray-600 mb-4">Coming soon...</p>
+            <p class="text-gray-600 mb-4">heh...</p>
+            <a id="learnMoreBtn" href="no.html" class="inline-block px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700">Coming soon...</a>
+        </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-20 py-6 text-center text-gray-500 text-sm">
+    &copy; 2025 KYSISS. All rights reserved.<br><br>THIS IS SATIRICAL, DON'T HUNT ME DOWN PLEASE :sob:<br><br>
+    Suicde is a serious problem, 1.5% of all deaths is caused by suicide. Now, this number may not seem like a lot, but it is the 10th leading cause of death. More than 720,000 people die from suicide every year, that is not funny at all. Now, this website may seem counter intuitive, but, this website and its services are a joke. I have an extremely strong anti-suicide stance, if you are experiencing something that makes you want to commit suicide, please reach out to friends and family, or call help services. So if you, the reader, are reading this, please DON'T spread this website to other people. I know how wrong it is to make a website like this as a joke, so please don't share this.<br><br>Always remember,<br><br>suicide is NEVER the answer.
+  </footer>
+</body>
+</html>
+
+
+<script>
+  let clickCount = 0;
+  const learnMoreBtn = document.getElementById('learnMoreBtn');
+
+  learnMoreBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // Always prevent default link behavior
+    clickCount++;
+
+    if (clickCount < 5) {
+    } else {
+      // On the 5th click, navigate to secret.html
+      window.location.href = 'no.html';
+    }
+  });
+</script>
